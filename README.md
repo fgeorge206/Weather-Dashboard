@@ -9,7 +9,8 @@ https://fgeorge206.github.io/Weather-Dashboard/
 
 ## Usage
 Enter a city to recieve the weather forcast.
-![weather-dashboard-screenshot](assets\images\weather-dashboard-screenshot.png)
+![weather-dashboard-screenshot](https://user-images.githubusercontent.com/120420050/222057120-158e6ad9-ef78-4a6a-8ccc-784630c34c96.png)
+
 
 ## Credits
 <a href="https://openweathermap.org/api"> Open Weather API </a>

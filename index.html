@@ -14,16 +14,16 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <header class="container-fluid text-white text-end">
+    <header class="container-fluid text-end">
       <h1>Weather Dashboard</h1>
     </header>
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3" id="search-city">
+            <form class="col-lg-3" id="search-city">
                 <h3>Search for a city:</h3>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="city-input">
+                    <input type="text" class="form-control" id="search-term">
                 </div>
                 <div class=" d-grid gap-2">
                     <button type="button" class="btn custom-btn" id="search-btn">Search</button>
@@ -31,7 +31,7 @@
                 </div>
                 <hr/>
                 <div id="history-list"></div>
-            </div>
+              </form>
             <div class="col-lg-9">
                 <div class="card">
                     <div class="card-body">

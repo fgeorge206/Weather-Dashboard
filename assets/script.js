@@ -7,13 +7,13 @@ var renderTemp = document.querySelector("#temp")
 var renderWind = document.querySelector("#wind")
 var renderHumid = document.querySelector("#humidity")
 
-function searchWeatherApi(city){
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`).then(function(res){
-        return res.json();
-    }).then (function(data){
-        renderResults(data)
-    })
-}
+// function searchWeatherApi(city){
+//     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`).then(function(res){
+//         return res.json();
+//     }).then (function(data){
+//         renderResults(data)
+//     })
+// }
 
 function renderResults(resultsData){
     console.log("inside of renderResults")

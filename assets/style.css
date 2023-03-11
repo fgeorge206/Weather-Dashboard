@@ -5,7 +5,7 @@
 }
 body{
     background-color: rgb(208, 200, 218);
-    /* background-image: linear-gradient(to right, rgb(208, 200, 218) , rgb(12, 38, 77)); */
+    background-image: linear-gradient(to right, rgb(208, 200, 218) , rgb(12, 38, 77));
 }
 
 header {
@@ -35,7 +35,7 @@ header {
 }
 
 .col {
-    background-color: #70acb4;
+    background-color: #85cbd4;
     color: white;
     text-align: left;
     border-radius: 5px;

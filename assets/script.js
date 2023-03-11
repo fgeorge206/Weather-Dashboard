@@ -11,7 +11,7 @@ var renderDate = document.querySelector("#date")
 var forecastData = document.querySelector("#five-day-forecast")
 
 function searchWeatherApi(city){
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`).then(function(res){
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`).then(function(res){
         return res.json();
     }).then (function(data){
         renderResults(data)
@@ -34,17 +34,11 @@ function renderResults(resultsData){
 
 
 function renderForcast(city){
-    var forTemp = document.createElement("p");
-    var forDate = document.createElement("p");
-    var forWind = document.createElement("p");
-    var forHumid = document.createElement("p");
-    var forIcon = document.createElement("img");
-    
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`).then(function(res){
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`).then(function(res){
         return res.json();
     }).then ((data)=>{
         console.log(data)
-        for (let i = 0; i < data.list.length; i = i+8) {
+        for (let i = 7; i < data.list.length; i = i+8) {
             var daysFormat = dayjs.unix(data.list[i].dt).format('MMMM D, YYYY');
             var fiDayIcon = data.list[i].weather[0].icon;
             var fiveDayInfo = document.createElement("div");
@@ -60,12 +54,6 @@ function renderForcast(city){
             forecastData.append(fiveDayInfo);
         }
     })
-
-    // forTemp.innerHTML = `Temp: ${resultsData.list[0].main.temp}℉`;
-    // forWind.innerHTML = `Wind: ${resultsData.list[0].wind.speed} MPH`;
-    // forHumid.innerHTML = ``;
-    // // forDate.innerHTML =  unixFormat
-    // // forIcon.setAttribute('src', 'http://openweathermap.org/img/w/' + weatherIcon + '.png')
 }
 
 
@@ -82,6 +70,7 @@ if(! localStorage.getItem('localCity')){
 searchForm.addEventListener("submit",function(e){
     e.preventDefault();
     var termToSearch = searchTerm.value;
+    forecastData.innerHTML = "";
     searchWeatherApi(termToSearch);
     renderForcast(termToSearch)
 })

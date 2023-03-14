@@ -5,7 +5,6 @@ This is a weather dashboard which presents the user with a way to view the curre
 This dashboard uses a weather API and local storage. This application helps me futher my knowledge on server-side APIs.
 
 ## Installation
-https://fgeorge206.github.io/Weather-Dashboard/
 
 ## Usage
 Enter a city to recieve the weather forcast.

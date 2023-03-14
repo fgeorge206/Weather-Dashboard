@@ -5,11 +5,11 @@
 }
 body{
     background-color: rgb(208, 200, 218);
-    background-image: linear-gradient(to right, rgb(208, 200, 218) , rgb(12, 38, 77));
+    background-image: linear-gradient(to right, #6bb5d4 , rgb(12, 77, 55));
 }
 
 header {
-    background-color: #70acb4;
+    background-color: #85d4a8;
     border-radius: 10px;
 }
 
@@ -19,11 +19,7 @@ header {
 }
 
 .custom-btn:hover, .clear-btn:hover {
-    background-color: #6cd4ff;
-}
-
-.custom-btn:active, .clear-btn:active {
-    transform: translateY(4px);
+    background-color: #85d4a8;
 }
 
 .clear-btn {
@@ -31,7 +27,7 @@ header {
 }
 
 .card {
-    background-color: #85cbd4;
+    background-color: #85d4a8;
 }
 
 .col {

@@ -5,11 +5,12 @@
 }
 body{
     background-color: rgb(208, 200, 218);
-    background-image: linear-gradient(to right, #6bb5d4 , rgb(12, 77, 55));
+    background-image: linear-gradient(to right, #333333 , rgb(7, 35, 46));
+    color: white;
 }
 
 header {
-    background-color: #85d4a8;
+    background-color: #578f70;
     border-radius: 10px;
 }
 
@@ -22,16 +23,13 @@ header {
     background-color: #85d4a8;
 }
 
-.clear-btn {
-    background-color: #6bb5d4;
-}
 
 .card {
-    background-color: #85d4a8;
+    background-color: #578f70;
 }
 
 .col {
-    background-color: #85cbd4;
+    background-color: #578f70;
     color: white;
     text-align: left;
     border-radius: 5px;

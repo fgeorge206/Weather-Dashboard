@@ -57,15 +57,7 @@ function renderForcast(city){
 }
 
 
-if(! localStorage.getItem('localCity')){
-    var localCity = []
-    localStorage.setItem('localCity',JSON.stringify(localCity))
-    
-}else{
-    var localCity = JSON.parse(localStorage.getItem('localCity'))
-} for (let i = 0; i < localCity.length; i++) {
-    savedCities(localCity[i])
-}
+
 
 searchForm.addEventListener("submit",function(e){
     e.preventDefault();
@@ -73,4 +65,44 @@ searchForm.addEventListener("submit",function(e){
     forecastData.innerHTML = "";
     searchWeatherApi(termToSearch);
     renderForcast(termToSearch)
+    
+    var localCity = []
+    if(localStorage.getItem('localCity') == null){
+        localCity.push(termToSearch)
+        localStorage.setItem('localCity',JSON.stringify(localCity))
+        
+    }else{ 
+        localCity = JSON.parse(localStorage.getItem('localCity')).slice()
+        console.log(localCity)
+        if(!localCity.includes(termToSearch)){
+            localCity.push(termToSearch)
+            savedCities(termToSearch)
+        }
+        localStorage.setItem("localCity",JSON.stringify(localCity))
+    }
 })
+
+function onLoad(){
+    if(localStorage.getItem('localCity') != null){
+        var localCity = JSON.parse(localStorage.getItem('localCity')).slice()
+        for (let i = 0; i < localCity.length; i++) {
+            savedCities(localCity[i])
+        }
+    }
+}
+
+function savedCities(city){
+    var citybtn = document.createElement("button")
+    citybtn.addEventListener("click",function(e){
+        e.preventDefault();
+        forecastData.innerHTML = "";
+        searchWeatherApi(city);
+        renderForcast(city)
+        
+    })
+    document.getElementById("history-list").prepend(citybtn);
+    citybtn.textContent = city;
+    citybtn.setAttribute("class","btn custom-btn")
+} 
+
+onLoad();

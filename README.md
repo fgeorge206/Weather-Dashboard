@@ -15,4 +15,4 @@ Enter a city to recieve the weather forcast.
 ## Credits
 <a href="https://openweathermap.org/api"> Open Weather API </a>
 <br/>
-Thank you <a href="https://github.com/BRosencrans">Brandon</a> and <a herf="https://github.com/claricetran">Clarice</a> for assistance on this assignment
+Thank you <a href="https://github.com/BRosencrans">Brandon</a> and <a href="https://github.com/claricetran">Clarice</a> for assistance on this assignment
